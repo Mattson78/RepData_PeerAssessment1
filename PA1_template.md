@@ -3,7 +3,7 @@
 
 ## Loading and preprocessing the data
 
-1.####Load the data (i.e. read.csv())
+1. ####Load the data (i.e. read.csv())
 
 
 
@@ -96,36 +96,6 @@ MissingValues <- length(which(is.na(activityData$steps)))
 
 ```r
 library(Hmisc)
-```
-
-```
-## Warning: package 'Hmisc' was built under R version 3.2.5
-```
-
-```
-## Loading required package: lattice
-```
-
-```
-## Loading required package: survival
-```
-
-```
-## Loading required package: Formula
-```
-
-```
-## 
-## Attaching package: 'Hmisc'
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     format.pval, round.POSIXt, trunc.POSIXt, units
-```
-
-```r
 aDataImputed <- activityData
 aDataImputed$steps <- impute(activityData$steps, fun=mean)
 ```
