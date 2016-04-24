@@ -38,8 +38,8 @@ qplot(stepsByDay, xlab = "Total steps per day", ylab = "Frequency using binwith 
 stepsByDayMean <- mean(stepsByDay)
 stepsByDayMedian <- median(stepsByDay)
 ```
-* Mean: r stepsByDayMean
-* Median: r stepsByDayMedian
+* Mean: 9354.2295
+* Median: 10395
 
 
 ## What is the average daily activity pattern?
@@ -71,7 +71,7 @@ mostSteps <- which.max(averageSteps$meanSteps)
 timeMostSteps <- gsub("([0-9]{1,2})([0-9]{2})", "\\1:\\2", averageSteps[mostSteps, "interval"])
 ```
 
-* Most steps at: r timeMostSteps
+* Most steps at: 8.35
 
 
 ## Imputing missing values
@@ -85,7 +85,7 @@ timeMostSteps <- gsub("([0-9]{1,2})([0-9]{2})", "\\1:\\2", averageSteps[mostStep
 MissingValues <- length(which(is.na(activityData$steps)))
 ```
 
-* Number of missing values: r MissingValues
+* Number of missing values: 2304
 
 
 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc
@@ -122,8 +122,8 @@ stepsByDayMeanI <- mean(stepsByDayimputed)
 stepsByDayMedianI <- median(stepsByDayimputed)
 ```
 
-* Mean (Imputed): r stepsByDayMeanI
-* Median(Imputed): r stepsByDayMedianI
+* Mean (Imputed): 1.0766 x 10^4
+* Median(Imputed): 1.0766 x 10^4
 
 
 
